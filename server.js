@@ -18,10 +18,10 @@ router.route('/gets')
             var getHeader = req.headers;
             var getQuery = req.query;
 
-            if(getHeader === null){
+            if(Object.keys(req.headers) === null){
                 getHeader = 'None';
             }
-            if(getQuery === null){
+            if(getQuery.length === 0){
                 getQuery = 'None';
             }
 
@@ -43,7 +43,7 @@ router.route('/posts')
             if(postHeader === null){
                 postHeader = 'None';
             }
-            if(postQuery === null){
+            if(postQuery.length === 0){
                 postQuery = 'None';
             }
 
@@ -65,7 +65,7 @@ router.route('/puts')
             if(putHeader === null){
                 putHeader = 'None';
             }
-            if(putQuery === null){
+            if(putQuery.length === 0){
                 putQuery = 'None';
             }
 
@@ -87,7 +87,7 @@ router.route('/deletes')
             if(delHeader === null){
                 delHeader = 'None';
             }
-            if(delQuery === null){
+            if(delQuery.length === 0){
                 delQuery = 'None';
             }
 
