@@ -18,7 +18,7 @@ router.route('/gets')
             var getHeader = req.headers;
             var getQuery = req.query.q;
 
-            if(Object.keys(req.headers) === null){
+            if(getHeader === null){
                 getHeader = 'None';
             }
             if(getQuery === undefined){
