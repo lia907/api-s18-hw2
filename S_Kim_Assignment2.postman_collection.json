@@ -1,0 +1,631 @@
+{
+	"info": {
+		"name": "S_Kim_Assignment2",
+		"_postman_id": "ca528b80-6267-e1b4-e606-73000af9da08",
+		"description": "Test Postman Calls",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Requests",
+			"description": "",
+			"item": [
+				{
+					"name": "GET Request to /gets",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://skimhw2.herokuapp.com/gets",
+							"protocol": "https",
+							"host": [
+								"skimhw2",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"gets"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GET Request to /",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://skimhw2.herokuapp.com/",
+							"protocol": "https",
+							"host": [
+								"skimhw2",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GET Request to /posts",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://skimhw2.herokuapp.com/posts",
+							"protocol": "https",
+							"host": [
+								"skimhw2",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"posts"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GET Request to /puts",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://skimhw2.herokuapp.com/puts",
+							"protocol": "https",
+							"host": [
+								"skimhw2",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"puts"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GET Request to /deletes",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://skimhw2.herokuapp.com/deletes",
+							"protocol": "https",
+							"host": [
+								"skimhw2",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"deletes"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "POST Requests",
+			"description": "",
+			"item": [
+				{
+					"name": "POST Request to /posts",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://skimhw2.herokuapp.com/posts",
+							"protocol": "https",
+							"host": [
+								"skimhw2",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"posts"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "POST Request to /",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://skimhw2.herokuapp.com/",
+							"protocol": "https",
+							"host": [
+								"skimhw2",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "POST Request to /gets",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://skimhw2.herokuapp.com/gets",
+							"protocol": "https",
+							"host": [
+								"skimhw2",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"gets"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "POST Request to /puts",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://skimhw2.herokuapp.com/puts",
+							"protocol": "https",
+							"host": [
+								"skimhw2",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"puts"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "POST Request to /deletes",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://skimhw2.herokuapp.com/deletes",
+							"protocol": "https",
+							"host": [
+								"skimhw2",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"deletes"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PUT Requests",
+			"description": "",
+			"item": [
+				{
+					"name": "PUT Request to /",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://skimhw2.herokuapp.com/",
+							"protocol": "https",
+							"host": [
+								"skimhw2",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Request to /gets",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://skimhw2.herokuapp.com/gets",
+							"protocol": "https",
+							"host": [
+								"skimhw2",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"gets"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Request to /posts",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://skimhw2.herokuapp.com/posts",
+							"protocol": "https",
+							"host": [
+								"skimhw2",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"posts"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Request to /deletes",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://skimhw2.herokuapp.com/deletes",
+							"protocol": "https",
+							"host": [
+								"skimhw2",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"deletes"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Request to /puts",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://skimhw2.herokuapp.com/puts",
+							"protocol": "https",
+							"host": [
+								"skimhw2",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"puts"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DELETE Requests",
+			"description": "",
+			"item": [
+				{
+					"name": "DELETE Request to /deletes (User/Pw Correct)",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "apihw2pw",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "sookim",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://skimhw2.herokuapp.com/deletes",
+							"protocol": "https",
+							"host": [
+								"skimhw2",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"deletes"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Request to /deletes (User/Pw Incorrect)",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "wrongpw",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "sookim",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://skimhw2.herokuapp.com/deletes",
+							"protocol": "https",
+							"host": [
+								"skimhw2",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"deletes"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Request to /",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "apihw2pw",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "sookim",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://skimhw2.herokuapp.com/",
+							"protocol": "https",
+							"host": [
+								"skimhw2",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Request to /gets",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "apihw2pw",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "sookim",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://skimhw2.herokuapp.com/gets",
+							"protocol": "https",
+							"host": [
+								"skimhw2",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"gets"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Request to /posts",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "apihw2pw",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "sookim",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://skimhw2.herokuapp.com/posts",
+							"protocol": "https",
+							"host": [
+								"skimhw2",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"posts"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Request to /puts",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "apihw2pw",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "sookim",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://skimhw2.herokuapp.com/puts",
+							"protocol": "https",
+							"host": [
+								"skimhw2",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"puts"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
