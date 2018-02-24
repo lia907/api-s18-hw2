@@ -16,7 +16,7 @@ var router = express.Router();
 router.route('/gets')
     .get(function (req, res) {
             var getHeader = req.headers;
-            var getQuery = req.query;
+            var getQuery = req.query.q;
 
             if(Object.keys(req.headers) === null){
                 getHeader = 'None';
@@ -38,7 +38,7 @@ router.route('/gets')
 router.route('/posts')
     .post(function (req, res) {
             var postHeader = req.headers;
-            var postQuery = req.query;
+            var postQuery = req.query.q;
 
             if(postHeader === null){
                 postHeader = 'None';
@@ -60,7 +60,7 @@ router.route('/posts')
 router.route('/puts')
     .put(function (req, res) {
             var putHeader = req.headers;
-            var putQuery = req.query;
+            var putQuery = req.query.q;
 
             if(putHeader === null){
                 putHeader = 'None';
@@ -82,7 +82,7 @@ router.route('/puts')
 router.route('/deletes')
     .delete(authController.isAuthenticated, function (req, res) {
             var delHeader = req.headers;
-            var delQuery = req.query;
+            var delQuery = req.query.q;
 
             if(delHeader === null){
                 delHeader = 'None';
