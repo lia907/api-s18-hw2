@@ -1,2 +1,4 @@
-# week4
-api assignment 2
+#CSCI 3916 - Assignment 2
+
+Soo Kim
+Assignment 2

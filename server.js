@@ -3,9 +3,7 @@ var http = require('http');
 var bodyParser = require('body-parser');
 var passport = require('passport');
 var authController = require('./auth');
-var authJwtController = require('./auth_jwt');
-db = require('./db')(); //global hack
-var jwt = require('jsonwebtoken');
+var dotenv = require('dotenv').config();
 
 var app = express();
 app.use(bodyParser.json());
@@ -15,63 +13,93 @@ app.use(passport.initialize());
 
 var router = express.Router();
 
-router.route('/post')
-    .post(authController.isAuthenticated, function (req, res) {
+router.route('/gets')
+    .get(function (req, res) {
+            var getHeader = req.headers;
+            var getQuery = req.query;
+
+            if(getHeader === null){
+                getHeader = 'None';
+            }
+            if(getQuery === null){
+                getQuery = 'None';
+            }
+
             console.log(req.body);
             res = res.status(200);
             if (req.get('Content-Type')) {
                 console.log("Content-Type: " + req.get('Content-Type'));
                 res = res.type(req.get('Content-Type'));
             }
-            res.send(req.body);
+            res.json({requestType: 'GET', header: getHeader, query: getQuery, key: process.env.UNIQUE_KEY});
         }
     );
 
-router.route('/postjwt')
-    .post(authJwtController.isAuthenticated, function (req, res) {
+router.route('/posts')
+    .post(function (req, res) {
+            var postHeader = req.headers;
+            var postQuery = req.query;
+
+            if(postHeader === null){
+                postHeader = 'None';
+            }
+            if(postQuery === null){
+                postQuery = 'None';
+            }
+
             console.log(req.body);
             res = res.status(200);
             if (req.get('Content-Type')) {
                 console.log("Content-Type: " + req.get('Content-Type'));
                 res = res.type(req.get('Content-Type'));
             }
-            res.send(req.body);
+            res.json({requestType: 'POST', header: postHeader, query: postQuery, key: process.env.UNIQUE_KEY});
         }
     );
 
-router.post('/signup', function(req, res) {
-    if (!req.body.username || !req.body.password) {
-        res.json({success: false, msg: 'Please pass username and password.'});
-    } else {
-        var newUser = {
-            username: req.body.username,
-            password: req.body.password
-        };
-        // save the user
-        db.save(newUser); //no duplicate checking
-        res.json({success: true, msg: 'Successful created new user.'});
-    }
-});
+router.route('/puts')
+    .put(function (req, res) {
+            var putHeader = req.headers;
+            var putQuery = req.query;
 
-router.post('/signin', function(req, res) {
+            if(putHeader === null){
+                putHeader = 'None';
+            }
+            if(putQuery === null){
+                putQuery = 'None';
+            }
 
-        var user = db.findOne(req.body.username);
-
-        if (!user) {
-            res.status(401).send({success: false, msg: 'Authentication failed. User not found.'});
+            console.log(req.body);
+            res = res.status(200);
+            if (req.get('Content-Type')) {
+                console.log("Content-Type: " + req.get('Content-Type'));
+                res = res.type(req.get('Content-Type'));
+            }
+            res.json({requestType: 'PUT', header: putHeader, query: putQuery, key: process.env.UNIQUE_KEY});
         }
-        else {
-            // check if password matches
-            if (req.body.password == user.password)  {
-                var userToken = { id : user.id, username: user.username };
-                var token = jwt.sign(userToken, process.env.SECRET_KEY);
-                res.json({success: true, token: 'JWT ' + token});
+    );
+
+router.route('/deletes')
+    .delete(authController.isAuthenticated, function (req, res) {
+            var delHeader = req.headers;
+            var delQuery = req.query;
+
+            if(delHeader === null){
+                delHeader = 'None';
             }
-            else {
-                res.status(401).send({success: false, msg: 'Authentication failed. Wrong password.'});
+            if(delQuery === null){
+                delQuery = 'None';
             }
-        };
-});
+
+            console.log(req.body);
+            res = res.status(200);
+            if (req.get('Content-Type')) {
+                console.log("Content-Type: " + req.get('Content-Type'));
+                res = res.type(req.get('Content-Type'));
+            }
+            res.json({requestType: 'DELETE', header: delHeader, query: delQuery, uniqueKey: process.env.UNIQUE_KEY});
+        }
+    );
 
 app.use('/', router);
-app.listen(process.env.PORT || 8080);
+app.listen(process.env.PORT || 5000);
